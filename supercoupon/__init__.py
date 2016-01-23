@@ -8,6 +8,9 @@ from waitress import serve
 def main(global_config, **settings):
     config = Configurator(settings=settings)
 
+    # Settings
+    config.include('supercoupon.settings')
+
     # Plugin
     config.include('pyramid_mako')
     config.include('pyramid_tm')
@@ -17,6 +20,9 @@ def main(global_config, **settings):
 
     # Routes
     config.add_route('index', '/')
+
+    # Models
+    config.include('supercoupon.models')
 
     # Static Views
     config.add_static_view(settings['supercoupon.static_assets_location'], 'supercoupon:static')
