@@ -5,6 +5,8 @@ from setuptools import setup
 entry_points = """
     [paste.app_factory]
     main = supercoupon:main
+    [console_scripts]
+    scweb = supercoupon:run_web
 """
 
 setup(name='supercoupon',
