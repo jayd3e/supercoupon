@@ -12,6 +12,9 @@ def main(global_config, **settings):
     config.include('pyramid_mako')
     config.include('pyramid_tm')
 
+    # Git
+    config.include('supercoupon.git')
+
     # Routes
     config.add_route('index', '/')
 
