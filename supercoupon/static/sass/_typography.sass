@@ -1,0 +1,41 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700')
+
+// CONTENT RESET STYLES
+
+li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td, div, span, textarea, strong
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color: $black
+    font-family: "Open Sans", HelveticaNeue, "Helvetica Neue", Hevetica, Arial, sans-serif
+    font-size: 1.4rem
+    line-height: 2rem
+    list-style: none outside none
+    text-decoration: none
+
+[class^="icon-"], [class*=" icon-"], [class^="path"], [class*=" path"]
+    font-style: normal
+
+// HEADERS
+
+h1, h2, h3, h4, h5, h6
+    font-family: HelveticaNeue, "Helvetica Neue", Hevetica, Arial, sans-serif
+
+.accent-text
+    color: $accent
+    font-size: inherit
+    font-weight: inherit
+
+p
+    letter-spacing: .03rem
+    line-height: 2.2rem
+    padding-bottom: 15px
+    &:last-child
+        padding-bottom: 0
+
+a
+    color: darken($accent, 10%)
+    font-weight: 400
+    &:hover
+        color: darken($link, 20%)

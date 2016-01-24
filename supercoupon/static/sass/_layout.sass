@@ -1,0 +1,27 @@
+// LAYOUT
+
+html
+    //background: url('../img/bg.jpg')
+    background-attachment: fixed
+    background-position: cover
+
+body
+    //background: url('../img/bg_pattern.png')
+
+.container
+    @extend .clearfix
+    margin: 0 auto
+    max-width: 960px
+
+.page
+    @extend .clearfix
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+    .container
+        padding: 0 15px
+
+// SMALL
+
+@media screen and (max-width: $small)

@@ -5,7 +5,7 @@
 <!DOCTYPE <!doctype html>
 <html lang="en">
     <head>
-        <title>Supercoupon</title>
+        <title>SuperCoupon</title>
 
         <!-- Styles -->
         ${ style_tmpl.render_style() }

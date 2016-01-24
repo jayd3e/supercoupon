@@ -1,26 +1,19 @@
-@import "reset"
+// Vars
 
-// Partials
+$black: #313131
+$accent: #90cdf5
+$link: $accent
+
+$small: 720px
+$medium: 960px
+
+@import "extensions"
+@import "reset"
+@import "typography"
+@import "layout"
+@import "button"
+
 @import "partials/header"
 @import "partials/featured_listing"
 @import "partials/listing"
-
-html
-    font-size: 62.5%
-
-body
-    font-family: sans-serif
-    font-size: 1.3rem
-
-.container
-    margin: 0 auto
-    max-width: 960px
-    padding: 0 15px
-
-header.header
-    @extend .clearfix
-    .logo
-    .navigation
-        float: right
-        li
-            float: left
+@import "partials/sidebar"
