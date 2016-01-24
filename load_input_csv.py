@@ -19,6 +19,7 @@ def main(request):
                               url=row[3].strip(),
                               discount=row[4].strip(),
                               category_id=int(row[5].strip()),
+                              image_url=row[7].strip(),
                               featured=row[0] == 'TRUE')
             db.add(listing)
 
@@ -27,5 +28,5 @@ def main(request):
 
 
 if __name__ == '__main__':
-    env = bootstrap('development.ini')
+    env = bootstrap('production.ini')
     main(env['request'])

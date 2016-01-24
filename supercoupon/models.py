@@ -73,6 +73,13 @@ class Createable(object):
     created = Column(DateTime)
 
 
+class PageLoad(Base):
+    __tablename__ = 'pageloads'
+
+    # Main fields
+    page_load_num = Column(Integer)
+
+
 class Category(Base):
     __tablename__ = 'categories'
 
