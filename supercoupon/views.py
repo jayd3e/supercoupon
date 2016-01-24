@@ -8,6 +8,7 @@ from supercoupon.models import PageLoad
              renderer='supercoupon:templates/pages/index.mako')
 def index(request):
     db = request.db
+    category_id = None
 
     # queries
     listing_queries = ListingQueries(db)
@@ -16,9 +17,12 @@ def index(request):
     page_load = db.query(PageLoad).first()
     page_load.page_load_num += 1
 
+    # if we have a category id, obtain it
+    category_id = request.GET.get('category_id', None)
+
     # get all of the featured listings
     featured = listing_queries.by_featured(limit=8).all()
-    listings = listing_queries.by_created(limit=40).all()
+    listings = listing_queries.by_created(limit=40, category_id=category_id).all()
 
     db.flush()
     return {

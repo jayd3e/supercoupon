@@ -37,13 +37,13 @@
     <section class="listings-wrap js-listings-wrap">
         <ol class="categories">
             <li class="active">
-                <a href="#">All Coupons</a>
+                <a href="${ request.route_url('index') }">All Coupons</a>
             </li>
             <li>
-                <a href="#">Cars</a>
+                <a href="${ request.route_url('index', _query={'category': 7}) }">Services</a>
             </li>
             <li>
-                <a href="#">Games</a>
+                <a href="${ request.route_url('index', _query={'category': 6}) }">Electronics</a>
             </li>
         </ol>
 

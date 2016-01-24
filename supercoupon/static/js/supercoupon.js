@@ -22,11 +22,15 @@ $(function() {
             this.listings_wrap_el.animate({
                 'scrollLeft': '+=650px'
             }, 200, this.toggle_arrows);
+
+            return false;
         },
         slide_left: function() {
             this.listings_wrap_el.animate({
                 'scrollLeft': '-=650px'
             }, 200, this.toggle_arrows);
+
+            return false;
         },
         toggle_arrows: function() {
             var scroll_left = this.listings_wrap_el.scrollLeft();
