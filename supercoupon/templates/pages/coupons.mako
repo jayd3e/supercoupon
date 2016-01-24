@@ -16,8 +16,8 @@
         </p>
 
         <div class="coupons-links">
-            <a href="">Sign up for coinbase</a></br>
-            <a href="">Sign up for Airbitz</a></br>
+            <a href="https://coinbase.com">Sign up for coinbase</a></br>
+            <a href="https://airbitz.co">Sign up for Airbitz</a></br>
         </div>
 
         <p>

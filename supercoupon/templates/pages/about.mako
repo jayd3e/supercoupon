@@ -19,9 +19,8 @@
             If you’re a coupon-er and want to get more information on bitcoin, follow the links below.
         </p>
 
-        <a href="">Bitcoin Wiki</a></br>
-        <a href="">Beginner’s Guide to Bitcoin</a></br>
-        <a href="">Bitcoin: How I Learned to Stop Worrying & Love it</a></br>
-        <a href="">Bitcoin.org</a></br>
+        <a href="https://bitcoin.org/en/">Bitcoin.org</a></br>
+        <a href="http://www.coindesk.com/information/">Beginner’s Guide to Bitcoin</a></br>
+        <a href="https://en.bitcoin.it/wiki/Main_Page">Bitcoin Wiki</a></br>
     </section>
 </%def>
