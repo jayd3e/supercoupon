@@ -36,13 +36,13 @@
 
     <section class="listings-wrap js-listings-wrap">
         <ol class="categories">
-            <li class="active">
+            <li class="${ 'active' if not request.GET.get('category') else '' }">
                 <a href="${ request.route_url('index') }">All Coupons</a>
             </li>
-            <li>
+            <li class="${ 'active' if request.GET.get('category') == '7' else '' }">
                 <a href="${ request.route_url('index', _query={'category': 7}) }">Services</a>
             </li>
-            <li>
+            <li class="${ 'active' if request.GET.get('category') == '6' else '' }">
                 <a href="${ request.route_url('index', _query={'category': 6}) }">Electronics</a>
             </li>
         </ol>
