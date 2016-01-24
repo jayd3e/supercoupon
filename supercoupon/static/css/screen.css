@@ -328,6 +328,9 @@ html {
 .alert-warning {
   background-color: #fcf5e2;
   border-color: #faebcc; }
+  .alert-warning a {
+    color: #8a6d3b;
+    font-weight: bold; }
 
 .sidebar {
   float: right;

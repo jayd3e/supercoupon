@@ -5,8 +5,9 @@
     <ol class="alerts">
         <li class="alert alert-warning">
             In order to receive any of the discounts listed on this site, you will need to own
-            some bitcoin.  If you're not sure what Bitcoin is, you can read more here.  If you
-            just want to know how to buy some bitcoin, then go grab a wallet here.
+            some bitcoin.  If you're not sure what Bitcoin is, you can read more <a href="https://bitcoin.org">here</a>.  If you
+            just want to know how to buy some bitcoin, then you can create a wallet on <a href="https://coinbase.com">coinbase</a> or
+            <a href="https://airbitz.co">airbitz</a>.
         </li>
     </ol>
 
