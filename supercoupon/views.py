@@ -1,6 +1,7 @@
 from pyramid.view import view_config
 
 from supercoupon.queries import ListingQueries
+from supercoupon.models import PageLoad
 
 
 @view_config(route_name='index',
@@ -11,10 +12,15 @@ def index(request):
     # queries
     listing_queries = ListingQueries(db)
 
+    # get the amount of page views and increment it
+    page_load = db.query(PageLoad).first()
+    page_load.page_load_num += 1
+
     # get all of the featured listings
     featured = listing_queries.by_featured(limit=8).all()
     listings = listing_queries.by_created(limit=40).all()
 
+    db.flush()
     return {
         'featured': featured,
         'listings': listings
