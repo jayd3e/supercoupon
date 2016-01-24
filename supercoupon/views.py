@@ -18,7 +18,7 @@ def index(request):
     page_load.page_load_num += 1
 
     # if we have a category id, obtain it
-    category_id = request.GET.get('category_id', None)
+    category_id = request.GET.get('category', None)
 
     # get all of the featured listings
     featured = listing_queries.by_featured(limit=8).all()
