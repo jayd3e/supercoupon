@@ -1,0 +1,31 @@
+// BUTTON
+
+.button, input[type="button"], input[type="submit"]
+    +transition(background-color, 0.1s)
+    +roundedCorners()
+    background-color: #1177BB
+    color: white !important
+    display: inline-block
+    font-family: HelveticaNeue, "Helvetica Neue", Hevetica, Arial, sans-serif
+    font-size: 13px
+    font-weight: bold
+    line-height: 15px
+    padding: 15px 20px
+    text-transform: uppercase
+    width: auto
+    &:hover
+        background-color: #0C5383
+    &.outline
+        +roundedCorners(20px)
+        background-color: transparent
+        border: 1px solid darken($accent, 10%)
+        color: darken($accent, 10%)
+        font-size: 12px
+        font-weight: 100
+        height: 35px
+        line-height: 15px
+        padding: 10px 15px
+        text-transform: none
+        &:hover
+            border-color: darken($accent, 25%)
+            color: darken($accent, 25%)

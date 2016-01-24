@@ -1,0 +1,29 @@
+// HEADER
+
+.header
+    @extend .clearfix
+    border-bottom: 1px solid #d5d5d5
+    background: white
+    display: block
+    position: fixed
+    width: 100%
+    z-index: 100
+    .logo, .navigation li a
+        +transition(color, 0.1s)
+    .logo
+        font-weight: bold
+        line-height: 65px
+    .navigation
+        float: right
+        li
+            display: inline-block
+            margin-left: 25px
+            margin-top: 10px
+            a
+                color: lighten($black, 30%)
+                font-size: 12px
+                font-weight: bold
+                line-height: 15px
+                text-transform: uppercase
+                &:hover
+                    color: $black

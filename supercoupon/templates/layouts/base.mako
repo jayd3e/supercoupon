@@ -5,7 +5,7 @@
 <!DOCTYPE <!doctype html>
 <html lang="en">
     <head>
-        <title>Supercoupon</title>
+        <title>SuperCoupon</title>
 
         <!-- Styles -->
         ${ style_tmpl.render_style() }
@@ -14,9 +14,7 @@
         ${ header_tmpl.render_header() }
 
         <section class="page js-page">
-            <div class="container">
-                ${ self.page() }
-            </div>
+            ${ self.page() }
         </section>
 
         ${ app_tmpl.render_app() }
