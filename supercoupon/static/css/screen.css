@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script");
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   border: 0;
   font-size: 62.5%;
@@ -16,7 +17,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .container:after, .page:after, .header:after {
+.clearfix:after, .container:after, .page:after, .header:after, .featured .featured-listings-wrap .featured-listings:after, .listings-wrap .categories:after, .listing:after {
   clear: both;
   content: "";
   display: table; }
@@ -57,15 +58,22 @@ a {
 
 html {
   background-attachment: fixed;
-  background-position: cover; }
+  background-position: cover;
+  overflow-x: hidden; }
 
 .container {
   margin: 0 auto;
   max-width: 960px; }
 
+.page .container {
+  padding-top: 66px; }
+
 @media screen and (max-width: 960px) {
   .container {
-    padding: 0 15px; } }
+    padding: 0 15px; }
+
+  .page .container {
+    padding-top: 185px; } }
 .button, input[type="button"], input[type="submit"] {
   transition-duration: 0.1s;
   -o-transition-duration: 0.1s;
@@ -88,7 +96,7 @@ html {
   background-clip: padding-box;
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
-  background-color: #1177BB;
+  background-color: #90cdf5;
   color: white !important;
   display: inline-block;
   font-family: HelveticaNeue, "Helvetica Neue", Hevetica, Arial, sans-serif;
@@ -99,7 +107,7 @@ html {
   text-transform: uppercase;
   width: auto; }
   .button:hover, input[type="button"]:hover, input[type="submit"]:hover {
-    background-color: #0C5383; }
+    background-color: #61b8f1; }
   .button.outline, input[type="button"].outline, input[type="submit"].outline {
     border-radius: 20px;
     -moz-border-radius: 20px;
@@ -144,6 +152,8 @@ html {
     -moz-transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out; }
   .header .logo {
+    font-size: 2.7rem;
+    font-family: "Oleo Script", cursive;
     font-weight: bold;
     line-height: 65px; }
   .header .navigation {
@@ -153,64 +163,108 @@ html {
       margin-left: 25px;
       margin-top: 10px; }
       .header .navigation li a {
-        color: #7e7e7e;
         font-size: 12px;
         font-weight: bold;
         line-height: 15px;
         text-transform: uppercase; }
-        .header .navigation li a:hover {
-          color: #313131; }
 
+@media screen and (max-width: 960px) {
+  .header {
+    text-align: center; }
+    .header .logo {
+      display: block;
+      margin: 0 auto; }
+    .header .navigation {
+      float: clear;
+      margin-bottom: 15px;
+      width: 100%; }
+      .header .navigation li {
+        display: block;
+        margin-left: 0; } }
 .featured {
-  height: 360px;
-  padding-top: 60px;
-  width: 100%; }
-  .featured .featured-listings .featured-listing {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+  position: relative; }
+  .featured .featured-listings-wrap {
+    overflow-x: auto; }
+    .featured .featured-listings-wrap .featured-listings {
+      position: relative;
+      width: 2575px; }
+      .featured .featured-listings-wrap .featured-listings li:last-child {
+        margin-right: 0; }
+  .featured .featured-arrow-previous, .featured .featured-arrow-next {
+    float: left;
+    font-size: 8rem;
+    position: absolute; }
+  .featured .featured-arrow-previous {
+    display: none;
+    left: -80px;
+    top: 50%; }
+  .featured .featured-arrow-next {
+    right: -80px;
+    top: 50%; }
+
+.featured-listing {
+  float: left;
+  margin: 25px 25px 0 0;
+  width: 300px; }
+  .featured-listing .featured-listing-image, .featured-listing .featured-listing-header {
+    margin-bottom: 10px; }
+  .featured-listing .featured-listing-image {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     background-clip: padding-box;
     -moz-background-clip: padding-box;
     -webkit-background-clip: padding-box;
-    background: rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    margin: 50px 25px 0;
-    padding: 25px;
-    height: 250px;
-    width: calc(33% - 33px); }
-    .featured .featured-listings .featured-listing:nth-child(3n+1) {
-      margin-left: 0px; }
-    .featured .featured-listings .featured-listing:nth-child(3n+3) {
-      margin-right: 0px; }
+    background: none center/cover #f2f2f2;
+    height: 150px;
+    width: 300px; }
+  .featured-listing .featured-listing-header {
+    font-size: 2rem; }
+  .featured-listing .featured-listing-url {
+    color: #bbb;
+    font-size: 1.3rem; }
+  .featured-listing .featured-listing-description {
+    color: #666; }
+  .featured-listing:hover {
+    cursor: pointer; }
 
 .listings-wrap {
   background: white;
   display: block;
-  padding: 50px 0; }
-  .listings-wrap .section-header {
+  margin: 25px 0; }
+  .listings-wrap .categories {
     border-bottom: 1px solid #d8d8d8;
-    display: block;
-    padding-bottom: 7px; }
-    .listings-wrap .section-header .section-header-text {
-      border-bottom: 3px solid #90cdf5;
-      font-size: 1.5rem;
+    display: block; }
+    .listings-wrap .categories li {
+      font-size: 1.2rem;
+      float: left;
       text-transform: uppercase;
-      padding-bottom: 6px;
-      padding-right: 10px; }
+      padding: 0 15px 5px 15px; }
+      .listings-wrap .categories li a {
+        color: #666;
+        font-weight: bold; }
+        .listings-wrap .categories li a:hover {
+          color: #313131; }
+    .listings-wrap .categories li.active {
+      border-bottom: 3px solid #90cdf5; }
+      .listings-wrap .categories li.active a {
+        color: #313131; }
 
 .listing {
   border-bottom: 1px solid #dedede;
   clear: both;
   display: block;
-  padding: 15px 0;
+  padding: 20px 0;
   position: relative; }
   .listing:last-child {
     border-bottom: 0; }
   .listing:hover {
-    background: #ecf6fd;
+    background: #f7fbfe;
     cursor: pointer; }
   .listing .listing-left {
     float: left; }
+    .listing .listing-left .listing-offer, .listing .listing-left .listing-offer .listing-offer-discount {
+      color: #FFF; }
     .listing .listing-left .listing-offer {
       border-radius: 5px;
       -moz-border-radius: 5px;
@@ -219,27 +273,61 @@ html {
       -moz-background-clip: padding-box;
       -webkit-background-clip: padding-box;
       background: #90cdf5;
-      color: #0b4f7b;
       font-weight: 600;
       vertical-align: top;
-      padding: 4px 10px 5px; }
+      margin-left: 15px;
+      padding: 4px 10px 5px;
+      text-align: center;
+      width: 58px; }
+      .listing .listing-left .listing-offer .listing-offer-discount {
+        font-size: 1.8rem; }
     .listing .listing-left .listing-logo {
       display: none;
       height: 50px;
       width: 100px; }
   .listing .listing-content {
-    display: inline-block;
-    padding-left: 15px; }
+    padding-left: 90px; }
     .listing .listing-content .listing-header {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
+      font-size: 2rem;
       padding-bottom: 7px;
       vertical-align: top; }
-      .listing .listing-content .listing-header .listing-offer {
-        margin-left: 5px; }
+    .listing .listing-content .listing-url {
+      color: #bbb;
+      font-size: 1.3rem; }
     .listing .listing-content .listing-description {
-      font-size: 1.3rem;
-      line-height: 2rem; }
+      color: #666; }
+
+.alerts {
+  margin-top: 20px; }
+
+.alert {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  border: 1px solid;
+  color: #575757;
+  font-size: 1.4rem;
+  padding: 15px;
+  position: relative; }
+  .alert i {
+    color: #000;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 28px;
+    top: 22px; }
+    .alert i:hover {
+      color: #999;
+      cursor: pointer; }
+
+.alert-success {
+  background-color: #F0FAF4; }
+
+.alert-warning {
+  background-color: #fcf5e2;
+  border-color: #faebcc; }
 
 .sidebar {
   float: right;
@@ -256,5 +344,20 @@ html {
       padding-bottom: 6px;
       padding-right: 10px;
       text-transform: uppercase; }
+
+.about, .coupons {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center; }
+  .about h1, .coupons h1 {
+    font-size: 3rem;
+    margin-bottom: 25px; }
+  .about p, .coupons p {
+    color: #666; }
+  .about iframe, .coupons iframe {
+    margin-bottom: 25px; }
+  .about .coupons-links, .coupons .coupons-links {
+    margin-bottom: 15px; }
 
 /*# sourceMappingURL=screen.css.map */

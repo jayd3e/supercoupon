@@ -12,10 +12,22 @@ def index(request):
     listing_queries = ListingQueries(db)
 
     # get all of the featured listings
-    featured = listing_queries.by_featured().all()
-    listings = listing_queries.by_created().all()
+    featured = listing_queries.by_featured(limit=8).all()
+    listings = listing_queries.by_created(limit=40).all()
 
     return {
         'featured': featured,
         'listings': listings
     }
+
+
+@view_config(route_name='about',
+             renderer='supercoupon:templates/pages/about.mako')
+def about(request):
+    return {}
+
+
+@view_config(route_name='coupons',
+             renderer='supercoupon:templates/pages/coupons.mako')
+def coupons(request):
+    return {}

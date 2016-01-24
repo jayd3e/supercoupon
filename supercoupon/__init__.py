@@ -20,6 +20,8 @@ def main(global_config, **settings):
 
     # Routes
     config.add_route('index', '/')
+    config.add_route('about', '/about')
+    config.add_route('coupons', '/coupons')
 
     # Models
     config.include('supercoupon.models')

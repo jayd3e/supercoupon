@@ -1,12 +1,9 @@
 // LAYOUT
 
 html
-    //background: url('../img/bg.jpg')
     background-attachment: fixed
     background-position: cover
-
-body
-    //background: url('../img/bg_pattern.png')
+    overflow-x: hidden
 
 .container
     @extend .clearfix
@@ -15,12 +12,16 @@ body
 
 .page
     @extend .clearfix
+    .container
+        padding-top: 66px
 
 // MEDIUM
 
 @media screen and (max-width: $medium)
     .container
         padding: 0 15px
+    .page .container
+        padding-top: 185px
 
 // SMALL
 

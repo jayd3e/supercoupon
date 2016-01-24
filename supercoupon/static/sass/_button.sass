@@ -3,7 +3,7 @@
 .button, input[type="button"], input[type="submit"]
     +transition(background-color, 0.1s)
     +roundedCorners()
-    background-color: #1177BB
+    background-color: $accent
     color: white !important
     display: inline-block
     font-family: HelveticaNeue, "Helvetica Neue", Hevetica, Arial, sans-serif
@@ -14,7 +14,7 @@
     text-transform: uppercase
     width: auto
     &:hover
-        background-color: #0C5383
+        background-color: darken($accent, 10%)
     &.outline
         +roundedCorners(20px)
         background-color: transparent

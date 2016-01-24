@@ -14,9 +14,12 @@ class ListingQueries(Queries):
         self.db = db
 
     def by_created(self, limit=10, offset=0):
-        return self.db.query(Listing).order_by(Listing.created). \
+        return self.db.query(Listing). \
+                       order_by(Listing.created). \
                        offset(offset).limit(limit)
 
     def by_featured(self, limit=20, offset=0):
-        return self.db.query(Listing).filter_by(featured=True). \
+        return self.db.query(Listing). \
+                       filter_by(featured=True). \
+                       order_by(Listing.created). \
                        offset(offset).limit(limit)

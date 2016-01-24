@@ -3,7 +3,8 @@ from sqlalchemy import (
     Integer,
     String,
     Boolean,
-    DateTime
+    DateTime,
+    ForeignKey
 )
 from sqlalchemy import engine_from_config
 from sqlalchemy.ext.declarative import declarative_base
@@ -72,15 +73,24 @@ class Createable(object):
     created = Column(DateTime)
 
 
+class Category(Base):
+    __tablename__ = 'categories'
+
+    # Main fields
+    name = Column(String(20))
+
+
 class Listing(Base, Createable):
     __tablename__ = 'listings'
 
     # Main fields
-    title = Column(String(50))
-    description = Column(String(300))
-    discount = Column(Integer)
+    title = Column(String(100))
+    description = Column(String(1000))
+    discount = Column(String(10))
     url = Column(String(100))
+    image_url = Column(String(100))
     featured = Column(Boolean)
+    category_id = Column(Integer, ForeignKey('categories.id'))
 
     def to_json(self):
         return {

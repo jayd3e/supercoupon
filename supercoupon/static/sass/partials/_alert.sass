@@ -1,0 +1,26 @@
+.alerts
+    margin-top: 20px
+
+.alert
+    +roundedCorners(5px)
+    border: 1px solid
+    color: #575757
+    font-size: 1.4rem
+    padding: 15px
+    position: relative
+    i
+        color: #000
+        font-size: 1.6rem
+        position: absolute
+        right: 28px
+        top: 22px
+        &:hover
+            color: #999
+            cursor: pointer
+
+.alert-success
+    background-color: #F0FAF4
+
+.alert-warning
+    background-color: #fcf5e2
+    border-color: #faebcc
